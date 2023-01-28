@@ -9,5 +9,11 @@ describe('Access Form Panel', ()=>{
         await homeScreen.selectingSwitch() 
         driver.execute('mobile: scroll', { direction: 'down', strategy: 'accessibility id', selector: '~button-Active' })
         await homeScreen.buttonActivate()
+     
+     it('Validate button exibition', async () => {
+        const isDisplayed = await $("~parentPanel").isDisplayed()
+        expect(isDisplayed);
+  });
+});
     });
 })
