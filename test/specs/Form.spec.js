@@ -10,7 +10,7 @@ describe('Access Form Panel', ()=>{
         driver.execute('mobile: scroll', { direction: 'down', strategy: 'accessibility id', selector: '~button-Active' })
         await homeScreen.buttonActivate()
      
-     it('Validate button exibition', async () => {
+     it('Validate button exhibit', async () => {
         const isDisplayed = await $("~parentPanel").isDisplayed()
         expect(isDisplayed);
   });
